@@ -1,0 +1,20 @@
+<div class="container">
+    <mat-card>
+        <mat-card-header>
+            <h1>Dodaj nowy post</h1>
+        </mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="blogForm" (ngSubmit)="onSubmit()">
+            <mat-form-field>
+                <input matInput placeholder="Post" formControlName="text">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="Data publikacji" formControlName="publicationDate">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <button matButton="filled" color="primary" type="submit" [disabled]="!blogForm.valid">Dodaj post</button>
+        </form>
+        </mat-card-content>
+    </mat-card>
+</div>
