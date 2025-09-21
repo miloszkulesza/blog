@@ -21,6 +21,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { AddComment } from './components/add-comment/add-comment';
 import { EditPost } from './components/edit-post/edit-post';
 import { TextShortPipe } from './pipes/text-short-pipe';
+import { AddColor } from './directives/add-color';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { TextShortPipe } from './pipes/text-short-pipe';
     OnePost,
     AddComment,
     EditPost,
-    TextShortPipe
+    TextShortPipe,
+    AddColor
   ],
   imports: [
     CommonModule,
@@ -48,7 +51,8 @@ import { TextShortPipe } from './pipes/text-short-pipe';
     MatPaginatorModule,
     MatIconModule,
     MatListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTooltipModule
 ],
   exports: [
     Blog,
@@ -58,7 +62,8 @@ import { TextShortPipe } from './pipes/text-short-pipe';
     OnePost,
     AddComment,
     EditPost,
-    TextShortPipe
+    TextShortPipe,
+    AddColor
   ]
 })
 export class BlogModule { }

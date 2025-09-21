@@ -11,7 +11,7 @@
 
         <ng-container matColumnDef="text">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Tekst </th>
-            <td mat-cell *matCellDef="let row"> {{row.text | textShort}} </td>
+            <td mat-cell *matCellDef="let row" appAddColor> {{row.text | textShort}} </td>
         </ng-container>
 
         <ng-container matColumnDef="createdDateTime">
@@ -27,10 +27,10 @@
         <ng-container matColumnDef="actions">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Akcje </th>
             <td mat-cell *matCellDef="let row"> 
-                <button mat-button matMiniFab (click)="onEditClick(row.id); $event.stopPropagation();" class="edit-button">
+                <button mat-button matMiniFab (click)="onEditClick(row.id); $event.stopPropagation();" class="edit-button" matTooltip="Edytuj">
                     <mat-icon class="editButtonIcon">edit</mat-icon>
                 </button> 
-                <button mat-button matMiniFab (click)="onDeleteClick(row.id); $event.stopPropagation();" class="delete-button">
+                <button mat-button matMiniFab (click)="onDeleteClick(row.id); $event.stopPropagation();" class="delete-button" matTooltip="Usuń">
                     <mat-icon class="deleteButtonIcon">delete</mat-icon>
                 </button> 
             </td>

@@ -2,10 +2,6 @@ import {
   MAT_INPUT_VALUE_ACCESSOR
 } from "./chunk-ATFWLXME.js";
 import {
-  ErrorStateMatcher,
-  _ErrorStateTracker
-} from "./chunk-ERTVIX2S.js";
-import {
   MatFormFieldModule
 } from "./chunk-7JOVDY27.js";
 import {
@@ -29,19 +25,23 @@ import {
   TextFieldModule
 } from "./chunk-5GPMVIBU.js";
 import {
+  ErrorStateMatcher,
+  _ErrorStateTracker
+} from "./chunk-ERTVIX2S.js";
+import {
   getSupportedInputTypes
 } from "./chunk-UYNCKMUR.js";
-import "./chunk-GN4J7PFA.js";
 import {
   coerceBooleanProperty
 } from "./chunk-77OQF4LR.js";
 import "./chunk-GKMOAAGR.js";
-import "./chunk-2ROSVCCT.js";
+import "./chunk-GN4J7PFA.js";
 import {
   MatCommonModule,
   _IdGenerator
 } from "./chunk-EOUIJGLR.js";
 import "./chunk-6QAEVS73.js";
+import "./chunk-2ROSVCCT.js";
 import "./chunk-U6UFZC4C.js";
 import {
   Platform

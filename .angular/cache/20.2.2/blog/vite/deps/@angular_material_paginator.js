@@ -1,24 +1,9 @@
 import {
-  MAT_TOOLTIP_SCROLL_STRATEGY_FACTORY_PROVIDER,
-  MatTooltip,
-  TooltipComponent
-} from "./chunk-6OLFJHAR.js";
+  MatTooltipModule
+} from "./chunk-WBXGG46F.js";
 import {
-  SelectionModel
-} from "./chunk-MUL3NPWN.js";
-import {
-  MAT_OPTGROUP,
-  MAT_OPTION_PARENT_COMPONENT,
-  MatOption,
-  MatOptionModule,
-  _countGroupLabelsBeforeOption,
-  _getOptionScrollPosition
-} from "./chunk-5Z6TTX44.js";
-import "./chunk-3EO5W5FH.js";
-import {
-  ErrorStateMatcher,
-  _ErrorStateTracker
-} from "./chunk-ERTVIX2S.js";
+  MatTooltip
+} from "./chunk-HIHX7KX7.js";
 import {
   MatFormFieldModule
 } from "./chunk-7JOVDY27.js";
@@ -28,39 +13,53 @@ import {
   MatFormFieldControl
 } from "./chunk-WWATDV3I.js";
 import {
+  CdkConnectedOverlay,
+  CdkOverlayOrigin,
+  OverlayModule,
+  createRepositionScrollStrategy
+} from "./chunk-CG5MGAHY.js";
+import {
+  SelectionModel
+} from "./chunk-MUL3NPWN.js";
+import {
   FormGroupDirective,
   NgControl,
   NgForm,
   Validators
 } from "./chunk-UEQUXHIF.js";
 import {
-  MatButtonModule,
-  MatIconButton
-} from "./chunk-Y2YI6U43.js";
-import "./chunk-NGTK3443.js";
-import "./chunk-NFBXSNMO.js";
-import "./chunk-DA42M4UO.js";
-import "./chunk-UYNCKMUR.js";
-import {
-  CdkConnectedOverlay,
-  CdkOverlayOrigin,
-  OverlayModule,
-  createRepositionScrollStrategy
-} from "./chunk-Y2ZPVPUX.js";
-import {
   CdkScrollableModule,
   ViewportRuler
 } from "./chunk-R2TH3VRP.js";
 import "./chunk-EUNE2O4G.js";
-import "./chunk-GN4J7PFA.js";
+import {
+  MatButtonModule,
+  MatIconButton
+} from "./chunk-Y2YI6U43.js";
+import {
+  MAT_OPTGROUP,
+  MAT_OPTION_PARENT_COMPONENT,
+  MatOption,
+  MatOptionModule,
+  _countGroupLabelsBeforeOption,
+  _getOptionScrollPosition
+} from "./chunk-5Z6TTX44.js";
+import {
+  ErrorStateMatcher,
+  _ErrorStateTracker
+} from "./chunk-ERTVIX2S.js";
+import "./chunk-3EO5W5FH.js";
+import "./chunk-NGTK3443.js";
+import "./chunk-NFBXSNMO.js";
+import "./chunk-DA42M4UO.js";
+import "./chunk-UYNCKMUR.js";
 import "./chunk-77OQF4LR.js";
 import {
   _animationsDisabled
 } from "./chunk-GKMOAAGR.js";
-import "./chunk-2ROSVCCT.js";
+import "./chunk-GN4J7PFA.js";
 import {
   A,
-  A11yModule,
   ActiveDescendantKeyManager,
   DOWN_ARROW,
   ENTER,
@@ -77,6 +76,7 @@ import {
   removeAriaReferencedId
 } from "./chunk-EOUIJGLR.js";
 import "./chunk-6QAEVS73.js";
+import "./chunk-2ROSVCCT.js";
 import {
   Directionality
 } from "./chunk-U6UFZC4C.js";
@@ -1627,32 +1627,6 @@ var MatSelectModule = class _MatSelectModule {
       imports: [OverlayModule, MatOptionModule, MatCommonModule, MatSelect, MatSelectTrigger],
       exports: [CdkScrollableModule, MatFormFieldModule, MatSelect, MatSelectTrigger, MatOptionModule, MatCommonModule],
       providers: [MAT_SELECT_SCROLL_STRATEGY_PROVIDER]
-    }]
-  }], null, null);
-})();
-
-// ../../../../../node_modules/@angular/material/fesm2022/tooltip-module.mjs
-var MatTooltipModule = class _MatTooltipModule {
-  static ɵfac = function MatTooltipModule_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _MatTooltipModule)();
-  };
-  static ɵmod = ɵɵdefineNgModule({
-    type: _MatTooltipModule,
-    imports: [A11yModule, OverlayModule, MatCommonModule, MatTooltip, TooltipComponent],
-    exports: [MatTooltip, TooltipComponent, MatCommonModule, CdkScrollableModule]
-  });
-  static ɵinj = ɵɵdefineInjector({
-    providers: [MAT_TOOLTIP_SCROLL_STRATEGY_FACTORY_PROVIDER],
-    imports: [A11yModule, OverlayModule, MatCommonModule, MatCommonModule, CdkScrollableModule]
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatTooltipModule, [{
-    type: NgModule,
-    args: [{
-      imports: [A11yModule, OverlayModule, MatCommonModule, MatTooltip, TooltipComponent],
-      exports: [MatTooltip, TooltipComponent, MatCommonModule, CdkScrollableModule],
-      providers: [MAT_TOOLTIP_SCROLL_STRATEGY_FACTORY_PROVIDER]
     }]
   }], null, null);
 })();
