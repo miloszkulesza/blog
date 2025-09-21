@@ -1,4 +1,12 @@
 import {
+  MatRipple,
+  MatRippleModule
+} from "./chunk-NFBXSNMO.js";
+import {
+  _StructuralStylesLoader
+} from "./chunk-DA42M4UO.js";
+import "./chunk-UYNCKMUR.js";
+import {
   DomPortalOutlet,
   OverlayConfig,
   OverlayModule,
@@ -6,25 +14,19 @@ import {
   createFlexibleConnectedPositionStrategy,
   createOverlayRef,
   createRepositionScrollStrategy
-} from "./chunk-AX7EKN3T.js";
+} from "./chunk-Y2ZPVPUX.js";
 import {
   CdkScrollableModule,
   ScrollDispatcher,
   ViewportRuler
-} from "./chunk-VLEGALTT.js";
-import "./chunk-I2GR22LD.js";
-import {
-  MatRipple,
-  MatRippleModule
-} from "./chunk-TGCOF554.js";
-import {
-  _StructuralStylesLoader
-} from "./chunk-XUWPESLH.js";
-import "./chunk-4VML6ZUY.js";
-import "./chunk-AFG6PSTW.js";
+} from "./chunk-R2TH3VRP.js";
+import "./chunk-EUNE2O4G.js";
+import "./chunk-GN4J7PFA.js";
+import "./chunk-77OQF4LR.js";
 import {
   _animationsDisabled
-} from "./chunk-6INEF45V.js";
+} from "./chunk-GKMOAAGR.js";
+import "./chunk-2ROSVCCT.js";
 import {
   DOWN_ARROW,
   ENTER,
@@ -42,17 +44,16 @@ import {
   hasModifierKey,
   isFakeMousedownFromScreenReader,
   isFakeTouchstartFromScreenReader
-} from "./chunk-3LBITIHR.js";
+} from "./chunk-EOUIJGLR.js";
 import {
   _CdkPrivateStyleLoader
-} from "./chunk-YQCD4WZT.js";
-import "./chunk-NNWHSL5P.js";
-import "./chunk-GDJ6SR2I.js";
-import "./chunk-RCOETTA6.js";
+} from "./chunk-6QAEVS73.js";
 import {
   Directionality
-} from "./chunk-7I4EXC42.js";
-import "./chunk-IV4TCPDD.js";
+} from "./chunk-U6UFZC4C.js";
+import "./chunk-EJKR2MI2.js";
+import "./chunk-T7EA5KZU.js";
+import "./chunk-QDDZ4YN4.js";
 import {
   ApplicationRef,
   ChangeDetectionStrategy,
@@ -114,7 +115,7 @@ import {
   ɵɵresetView,
   ɵɵrestoreView,
   ɵɵviewQuery
-} from "./chunk-A4I6BUIB.js";
+} from "./chunk-GRAAXKPC.js";
 import {
   Subject,
   Subscription,
@@ -126,13 +127,13 @@ import {
   switchMap,
   take,
   takeUntil
-} from "./chunk-Z47DVUQS.js";
+} from "./chunk-SPG2NHNM.js";
 import {
   __spreadProps,
   __spreadValues
 } from "./chunk-WDMUDEB6.js";
 
-// ../../../../node_modules/@angular/material/fesm2022/menu.mjs
+// ../../../../../node_modules/@angular/material/fesm2022/menu.mjs
 var _c0 = ["mat-menu-item", ""];
 var _c1 = [[["mat-icon"], ["", "matMenuItemIcon", ""]], "*"];
 var _c2 = ["mat-icon, [matMenuItemIcon]", "*"];

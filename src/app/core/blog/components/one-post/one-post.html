@@ -14,18 +14,24 @@
                 {{post.text}}
             </mat-card-content>
         </mat-card>
-
+        <button matButton="filled" (click)="openDialog()">Dodaj komentarz</button>
         <mat-card>
+            <mat-card-title>
+                Komentarze
+            </mat-card-title>
             <mat-card-content>
-                <h3>Komentarze</h3>
                 <mat-list>
                     @if (post.comments.length) {
                         @for (comment of post.comments; track post.comments)
                         {
-                            <mat-list-item role="listitem">
+                            <mat-list-item role="listitem" class="commentListItem">
                                 <div mat-list-icon>
-                                    <div mat-line><mat-icon>account_circle</mat-icon>{{comment.author}}</div>
-                                    <div mat-line>{{comment.text}}</div>
+                                    <div class="author">
+                                        <mat-icon>account_circle</mat-icon>{{comment.author}}
+                                    </div>
+                                    <div>
+                                        {{comment.text}}
+                                    </div>
                                 </div>
                             </mat-list-item>
                         }

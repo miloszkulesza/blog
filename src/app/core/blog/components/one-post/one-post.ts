@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { BlogService } from '../../blog-service';
 import { PostInterface } from '../../../interface/get-posts-response.interface';
 import { ActivatedRoute } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { AddComment } from '../add-comment/add-comment';
 
 @Component({
   selector: 'app-one-post',
@@ -12,7 +14,8 @@ import { ActivatedRoute } from '@angular/router';
 export class OnePost implements OnInit{
   post: PostInterface;
 
-  constructor(private blogService: BlogService,
+  constructor(public dialog: MatDialog,
+    private blogService: BlogService,
     private route: ActivatedRoute
   ) {
 
@@ -28,5 +31,14 @@ export class OnePost implements OnInit{
       this.post = res;
       console.log(this.post);
     })
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(AddComment, {data: {id: this.post.id}});
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.getPost();
+      }
+    });
   }
 }

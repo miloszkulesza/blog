@@ -6,6 +6,9 @@ import { MatSort } from '@angular/material/sort';
 import { PostInterface } from '../interface/get-posts-response.interface';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { MatDialog } from '@angular/material/dialog';
+import { EditPost } from './components/edit-post/edit-post';
 
 @Component({
   selector: 'app-blog',
@@ -14,14 +17,16 @@ import { Router } from '@angular/router';
   styleUrl: './blog.scss'
 })
 export class Blog implements OnInit{
-  displayedColumns: string[] = ['id', 'text', 'createdDateTime', 'author', 'delete'];
+  displayedColumns: string[] = ['id', 'text', 'createdDateTime', 'author', 'actions'];
   dataSource: MatTableDataSource<PostInterface>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private blogService: BlogService,
-    private router: Router
+  constructor(public dialog: MatDialog,
+    private blogService: BlogService,
+    private router: Router,
+    private toastr: ToastrService
   ) {
 
   }
@@ -48,10 +53,22 @@ export class Blog implements OnInit{
   }
 
   onDeleteClick(rowId: number): void {
-    console.log(`usuwam post ${rowId}`);
+    this.blogService.deletePost(rowId).subscribe(() => {
+      this.toastr.success('Usuń post', `Usunięto post o id ${rowId}`);
+      this.getAllPosts();
+    });
   }
 
   goToPost(rowId: number): void {
     this.router.navigate([`/one-post/${rowId}`]);
+  }
+
+  onEditClick(rowId: number): void {
+    const dialogRef = this.dialog.open(EditPost, {data: {id: rowId}});
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.getAllPosts();
+      }
+    });
   }
 }

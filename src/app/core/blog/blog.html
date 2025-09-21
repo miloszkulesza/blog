@@ -1,5 +1,5 @@
 <mat-form-field>
-    <mat-label>Filter</mat-label>
+    <mat-label>Filtr</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
 </mat-form-field>
 <div class="mat-elevation-z8">
@@ -24,9 +24,12 @@
             <td mat-cell *matCellDef="let row"> {{row.author}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="delete">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Usuń </th>
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Akcje </th>
             <td mat-cell *matCellDef="let row"> 
+                <button mat-button matMiniFab (click)="onEditClick(row.id); $event.stopPropagation();" class="edit-button">
+                    <mat-icon class="editButtonIcon">edit</mat-icon>
+                </button> 
                 <button mat-button matMiniFab (click)="onDeleteClick(row.id); $event.stopPropagation();" class="delete-button">
                     <mat-icon class="deleteButtonIcon">delete</mat-icon>
                 </button> 

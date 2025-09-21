@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            Edytuj post
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="editPostForm">
+            <mat-form-field>
+                <input matInput formControlName="text" placeholder="Dodaj nowy Tekst">
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button matButton (click)="cancel()">Anuluj</button>
+        <button matButton="filled" (click)="submit()">Zapisz</button>
+    </mat-card-actions>
+</mat-card>

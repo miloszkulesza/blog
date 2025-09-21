@@ -6,7 +6,7 @@ export interface PostInterface {
     scope: string;
     status?: string;
     comments: PostCommentInterface[];
-    version?: string;
+    version?: number;
     publicationDate?: string;
 }
 

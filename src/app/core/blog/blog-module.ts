@@ -17,6 +17,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
 import { OnePost } from './components/one-post/one-post';
 import { MatListModule } from '@angular/material/list';
+import { MatDialogModule } from '@angular/material/dialog';
+import { AddComment } from './components/add-comment/add-comment';
+import { EditPost } from './components/edit-post/edit-post';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { MatListModule } from '@angular/material/list';
     Info,
     BlogPage,
     Contact,
-    OnePost
+    OnePost,
+    AddComment,
+    EditPost
   ],
   imports: [
     CommonModule,
@@ -40,14 +45,17 @@ import { MatListModule } from '@angular/material/list';
     MatSortModule,
     MatPaginatorModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatDialogModule
 ],
   exports: [
     Blog,
     Info,
     BlogPage,
     Contact,
-    OnePost
+    OnePost,
+    AddComment,
+    EditPost
   ]
 })
 export class BlogModule { }
